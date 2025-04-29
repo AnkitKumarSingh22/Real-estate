@@ -1,0 +1,64 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-form label {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.payment-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.btn {
+    margin-top: 20px;
+    background-color: #2e86de;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e6bb8;
+}
+
+.payment-method {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.payment-method input[type="radio"] {
+    margin-right: 5px;
+}

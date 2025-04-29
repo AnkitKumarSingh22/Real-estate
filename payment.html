@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment | R State</title>
+    <link rel="stylesheet" href="payment-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Secure Payment</h1>
+        <form class="payment-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com" required>
+
+            <label>Choose Payment Method</label>
+            <div class="payment-method">
+                <input type="radio" id="card-option" name="payment" checked>
+                <label for="card-option">Card Payment</label>
+                <input type="radio" id="upi-option" name="payment">
+                <label for="upi-option">UPI</label>
+            </div>
+
+            <!-- Card Fields -->
+            <div id="card-fields">
+                <label for="card">Card Number</label>
+                <input type="text" id="card" maxlength="16" placeholder="1234 5678 9012 3456">
+
+                <label for="exp">Expiry Date</label>
+                <input type="text" id="exp" placeholder="MM/YY">
+
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" maxlength="3" placeholder="123">
+            </div>
+
+            <!-- UPI Field -->
+            <div id="upi-field" style="display:none;">
+                <label for="upi">UPI ID</label>
+                <input type="text" id="upi" placeholder="yourname@upi">
+            </div>
+
+            <button type="submit" class="btn">Pay Now</button>
+        </form>
+    </div>
+
+    <script>
+        const cardOption = document.getElementById("card-option");
+        const upiOption = document.getElementById("upi-option");
+        const cardFields = document.getElementById("card-fields");
+        const upiField = document.getElementById("upi-field");
+
+        cardOption.addEventListener("change", () => {
+            cardFields.style.display = "block";
+            upiField.style.display = "none";
+        });
+
+        upiOption.addEventListener("change", () => {
+            cardFields.style.display = "none";
+            upiField.style.display = "block";
+        });
+    </script>
+</body>
+</html>
