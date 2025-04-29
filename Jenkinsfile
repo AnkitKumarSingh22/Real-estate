@@ -8,7 +8,7 @@ environment {
 stages {
     stage('Checkout') {
         steps {
-            git url: 'https://github.com/thekaran69/Sneaker-Store-WEBSITE', credentialsId: 'github-token'
+            git url: 'https://github.com/AnkitKumarSingh22/Real-estate', credentialsId: 'github-token'
         }
     }
 
